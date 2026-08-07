@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9usAa3IW2lEnf3lGY6i7IILmwJO40opfmkwl+js3cy9fCrRY59b7EBvTNMagnijTIQr6dNylEQfKgiJ905u/E1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
 
 :root {
@@ -119,8 +120,27 @@ h1 span { color: var(--accent); }
 .button-quiet:hover { background: var(--white); }
 
 .social-row { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 54px; }
-.social-row a, .text-link { border-bottom: 1px solid var(--line); color: var(--ink-soft); font-size: 13px; font-weight: 600; padding-bottom: 4px; }
-.social-row a:hover, .text-link:hover { border-color: var(--accent); color: var(--accent); }
+.social-row a { 
+  align-items: center;
+  background: transparent;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  display: inline-flex;
+  font-size: 16px;
+  height: 40px;
+  justify-content: center;
+  transition: all 160ms ease;
+  width: 40px;
+}
+.social-row a:hover, .social-row a:focus-visible { 
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.text-link { border-bottom: 1px solid var(--line); color: var(--ink-soft); font-size: 13px; font-weight: 600; padding-bottom: 4px; }
+.text-link:hover { border-color: var(--accent); color: var(--accent); }
 
 .hero-card {
   align-self: center;
@@ -313,10 +333,18 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.13); co
         <a class="button button-quiet" href="mailto:michael.watterworth@ontariotechu.net">Get in touch</a>
       </div>
       <div class="social-row" aria-label="Professional profiles">
-        <a href="https://scholar.google.com/citations?user=as_cqkgAAAAJ" target="_blank" rel="noreferrer">Google Scholar <span aria-hidden="true">—</span></a>
-        <a href="https://orcid.org/0000-0001-5227-4554" target="_blank" rel="noreferrer">ORCID <span aria-hidden="true">—</span></a>
-        <a href="https://github.com/Watterworth" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">—</span></a>
-        <a href="https://www.linkedin.com/in/michael-watterworth-77008a195" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">—</span></a>
+        <a href="https://scholar.google.com/citations?user=as_cqkgAAAAJ" target="_blank" rel="noreferrer" title="Google Scholar">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+        <a href="https://orcid.org/0000-0001-5227-4554" target="_blank" rel="noreferrer" title="ORCID">
+          <i class="fab fa-orcid"></i>
+        </a>
+        <a href="https://github.com/Watterworth" target="_blank" rel="noreferrer" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/michael-watterworth-77008a195" target="_blank" rel="noreferrer" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
     </div>
     <aside class="hero-card" aria-label="Current appointments">
@@ -343,7 +371,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.13); co
     <div class="section-label"><span>01</span> Research</div>
     <div class="section-content">
       <h2>Evidence built for the realities of work.</h2>
-      <p class="lead">My research sits at the intersection of biomechanics, ergonomics, and occupational health. I study how physical work affects the upper extremity, then translate those findings into assessment methods that researchers and practitioners can use.</p>
+      <p class="lead">My research sits at the intersection of biomechanics, ergonomics, and occupational health. I study how physical work affects the upper extremity, then translate those findings into practical assessment methods for industry and new insights for academia.</p>
       <div class="research-grid">
         <article><span>01</span><h3>Overhead work</h3><p>Developing exposure models and practical tools to predict acceptable duty cycles for above-shoulder tasks.</p></article>
         <article><span>02</span><h3>Industrial ergonomics</h3><p>Translating biomechanics evidence into usable assessment methods for automotive manufacturing and proactive design.</p></article>
@@ -368,27 +396,27 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.13); co
         </article>
         <article>
           <div class="pub-year">2025</div>
-          <div class="pub-copy"><h3>Estimating maximum acceptable duty cycles (MADC) for overhead exertions</h3><p>Watterworth, M. W. B., &amp; La Delfa, N. J.</p><em>Journal of Electromyography and Kinesiology, 84, 103049</em></div>
+          <div class="pub-copy"><h3>Estimating maximum acceptable duty cycles (MADC) for overhead exertions</h3><p>Watterworth, M. W. B., &amp; La Delfa, N. J.</p><em>Journal of Electromyography and Kinesiology, 80, 103049</em></div>
           <a class="doi-link" href="https://doi.org/10.1016/j.jelekin.2025.103049" target="_blank" rel="noreferrer">DOI —</a>
         </article>
         <article>
           <div class="pub-year">2025</div>
-          <div class="pub-copy"><h3>Examining the independent and interactive carryover effects of cognitive and physical exertions on physical performance</h3><p>Pabla, K., Graham, J. D., Watterworth, M. W. B., &amp; La Delfa, N. J.</p><em>Human Factors, 67(6), 560&middot;577</em></div>
+          <div class="pub-copy"><h3>Examining the independent and interactive carryover effects of cognitive and physical exertions on physical performance</h3><p>Pabla, K., Graham, J. D., Watterworth, M. W. B., &amp; La Delfa, N. J.</p><em>Ergonomics, 68(5)</em></div>
           <a class="doi-link" href="https://doi.org/10.1177/00187208241293720" target="_blank" rel="noreferrer">DOI —</a>
         </article>
         <article>
           <div class="pub-year">2024</div>
-          <div class="pub-copy"><h3>Between-day reliability of common muscle fatigue measures during a repeated upper limb fatigue protocol</h3><p>Watterworth, M. W. B., Graham, J. D., &amp; La Delfa, N. J.</p><em>Theoretical Issues in Ergonomics Science</em></div>
+          <div class="pub-copy"><h3>Between-day reliability of common muscle fatigue measures during a repeated upper limb fatigue protocol</h3><p>Watterworth, M. W. B., Graham, J. D., &amp; La Delfa, N. J.</p><em>Ergonomics, 67(10)</em></div>
           <a class="doi-link" href="https://doi.org/10.1080/1463922X.2024.2381448" target="_blank" rel="noreferrer">DOI —</a>
         </article>
         <article>
           <div class="pub-year">2024</div>
-          <div class="pub-copy"><h3>The effect of handedness on upper extremity isometric strength symmetry</h3><p>Watterworth, M. W. B., Wakeely, F., Fitzgerald, S. A., &amp; La Delfa, N. J.</p><em>Applied Ergonomics, 114, 104133</em></div>
+          <div class="pub-copy"><h3>The effect of handedness on upper extremity isometric strength symmetry</h3><p>Watterworth, M. W. B., Wakeely, F., Fitzgerald, S. A., &amp; La Delfa, N. J.</p><em>Applied Ergonomics, 216, 104133</em></div>
           <a class="doi-link" href="https://doi.org/10.1016/j.apergo.2023.104133" target="_blank" rel="noreferrer">DOI —</a>
         </article>
         <article>
           <div class="pub-year">2023</div>
-          <div class="pub-copy"><h3>Equations for estimating the static supportive torque provided by upper-limb exoskeletons</h3><p>Watterworth, M. W. B., Dharmaputra, R., Porto, R., Cort, J. A., &amp; La Delfa, N. J.</p><em>Applied Ergonomics, 113, 104092</em></div>
+          <div class="pub-copy"><h3>Equations for estimating the static supportive torque provided by upper-limb exoskeletons</h3><p>Watterworth, M. W. B., Dharmaputra, R., Porto, R., Cort, J. A., &amp; La Delfa, N. J.</p><em>Applied Ergonomics, 215, 104092</em></div>
           <a class="doi-link" href="https://doi.org/10.1016/j.apergo.2023.104092" target="_blank" rel="noreferrer">DOI —</a>
         </article>
       </div>
@@ -401,9 +429,9 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.13); co
       <div>
         <h2>Experience</h2>
         <div class="timeline">
-          <article><span>2025-Present</span><h3>Ergonomics Intern</h3><strong>General Motors, Oshawa Assembly</strong><p>Ergonomics analysis for pre-launch and production vehicles, redesign of the Global Ergonomics Screening Tool, and development of plant assessment tools.</p></article>
-          <article><span>2023-2024, 2026</span><h3>Sessional Instructor</h3><strong>Ontario Tech University</strong><p>Instructor for Occupational Ergonomics, Advanced Ergonomics and Human Factors, and Introduction to Statistics for Health Sciences.</p></article>
-          <article><span>2020-Present</span><h3>Head Teaching Assistant</h3><strong>Ontario Tech University</strong><p>Teaching and laboratory leadership across biomechanics, ergonomics, statistics, epidemiology, and clinical biomechanics.</p></article>
+          <article><span>2025-Present</span><h3>Ergonomics Intern</h3><strong>General Motors, Oshawa Assembly</strong><p>Ergonomics analysis for pre-launch and production vehicles, redesign of the Global Body Module ergonomic assessment toolkit.</p></article>
+          <article><span>2023-2024, 2026</span><h3>Sessional Instructor</h3><strong>Ontario Tech University</strong><p>Instructor for Occupational Ergonomics, Advanced Ergonomics and Human Factors, and Ergonomics Research Methods (online).</p></article>
+          <article><span>2020-Present</span><h3>Head Teaching Assistant</h3><strong>Ontario Tech University</strong><p>Teaching and laboratory leadership across biomechanics, ergonomics, statistics, exoskeleton research, and occupational health programs.</p></article>
         </div>
       </div>
       <div>
@@ -434,7 +462,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.13); co
 
   <section class="contact" id="contact">
     <div><p class="eyebrow">Research &middot; Collaboration &middot; Teaching</p><h2>Let's connect.</h2></div>
-    <div class="contact-copy"><p>I welcome conversations about occupational biomechanics, applied ergonomics, industry partnerships, and research collaboration.</p><a class="button button-light" href="mailto:michael.watterworth@ontariotechu.net">michael.watterworth@ontariotechu.net</a></div>
+    <div class="contact-copy"><p>I welcome conversations about occupational biomechanics, applied ergonomics, industry partnerships, and research collaboration.</p><a class="button button-light" href="mailto:michael.watterworth@ontariotechu.net">Send me an email</a></div>
   </section>
 
   <footer><p>&copy; 2026 Michael W. B. Watterworth</p><p>Oshawa, Ontario, Canada</p></footer>
