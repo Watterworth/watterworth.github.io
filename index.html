@@ -181,6 +181,18 @@ h1 span { color: var(--accent); }
   position: relative;
   width: 164px;
 }
+    
+.monogram {
+  overflow: hidden;
+}
+
+.monogram img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
 
 .appointment { border-top: 1px solid rgba(255,255,255,.16); padding: 20px 0 4px; position: relative; }
 .appointment span { color: #8ed3ca; display: block; font-family: inherit; font-size: 10px; letter-spacing: .13em; margin-bottom: 7px; text-transform: uppercase; }
@@ -352,7 +364,9 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.13); co
       </div>
     </div>
     <aside class="hero-card" aria-label="Current appointments">
-      <div class="monogram" aria-hidden="true">MW</div>
+      <div class="monogram">
+  <img src="headshot.jpg" alt="Michael W. B. Watterworth">
+</div>
       <div class="appointment">
         <span>Current</span><strong>PhD Candidate</strong>
         <p>Faculty of Health Sciences<br>Ontario Tech University</p>
